@@ -6,7 +6,7 @@
 /*   By: bmontoya <bmontoya@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/24 19:06:37 by bmontoya          #+#    #+#             */
-/*   Updated: 2017/06/27 14:26:08 by bmontoya         ###   ########.fr       */
+/*   Updated: 2017/07/02 14:53:14 by bmontoya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void		fl_mandlebrot(t_env *env, int y, int yend)
 				if ((z.x * z.x + z.yi * z.yi) > 4)
 					break ;
 			}
-			env->imgp[x + y * HEIGHT] = (env->maxiters - iters) * env->cdiv;
+			env->imgp[x + y * WIDTH] = (env->maxiters - iters) * env->cdiv;
 			++x;
 		}
 		++y;
@@ -66,7 +66,7 @@ void		fl_julia(t_env *env, int y, int yend)
 					break ;
 				++iters;
 			}
-			env->imgp[x + y * HEIGHT] = (env->maxiters - iters) * env->cdiv;
+			env->imgp[x + y * WIDTH] = (env->maxiters - iters) * env->cdiv;
 			++x;
 		}
 		++y;
@@ -99,7 +99,7 @@ void		fl_sierpinski(t_env *env, int y, int yend)
 		{
 			nx = (x - env->xoff) / env->xzoom + env->xcenter;
 			ny = (y - env->yoff) / env->yzoom + env->ycenter;
-			env->imgp[x + y * HEIGHT] =
+			env->imgp[x + y * WIDTH] =
 			fl_sierpinski_color(imaxabs(nx), imaxabs(ny));
 			++x;
 		}

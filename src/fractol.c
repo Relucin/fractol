@@ -6,7 +6,7 @@
 /*   By: bmontoya <bmontoya@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/24 18:52:55 by bmontoya          #+#    #+#             */
-/*   Updated: 2017/06/28 18:07:23 by bmontoya         ###   ########.fr       */
+/*   Updated: 2017/07/02 14:44:58 by bmontoya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int		fl_select_fractol(t_env *env, char *fractol)
 		env->xoff = 0;
 		env->yoff = 0;
 	}
-	env->maxiters = 50;
+	env->maxiters = 100;
 	env->cdiv = 0xFFFFFF / env->maxiters;
 	return (1);
 }

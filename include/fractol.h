@@ -6,7 +6,7 @@
 /*   By: bmontoya <bmontoya@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/04 19:46:57 by bmontoya          #+#    #+#             */
-/*   Updated: 2017/06/26 21:22:20 by bmontoya         ###   ########.fr       */
+/*   Updated: 2017/07/02 14:54:55 by bmontoya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # include <pthread.h>
 # define WIDTH 1000
 # define HEIGHT 1000
-# define HHEIGHT 500
-# define HWIDTH 500
+# define HHEIGHT HEIGHT / 2
+# define HWIDTH WIDTH / 2
 # define DZOOM .25
 
 typedef struct	s_complex
